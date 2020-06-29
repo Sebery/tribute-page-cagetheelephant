@@ -1,0 +1,345 @@
+/****************************************************************/
+/*************************GENERAL STYLES*************************/
+/****************************************************************/
+
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+body {
+	/*background: #69bedd; */
+	/*background: linear-gradient(0deg, #71ceef 0%, #065f76 100%);*/
+	background: linear-gradient(0deg, #71ceef 0%, #5aa4be 100%);
+	background-attachment: fixed;
+	font-family: monospace sans-serif;
+}
+
+img {
+	width: 100%;
+	height: auto;
+	margin: auto;
+}
+
+h1 {
+	font-size: 2em;
+}
+
+h2 {
+	font-size: 1.5em;
+}
+
+h3 {
+	font-size: 1.17em;
+}
+
+h4 {
+	font-size: 1em;
+}
+
+h5 {
+	font-size: 0.83em;
+}
+
+h6 {
+	font-size: 0.67em;
+}
+
+a:visited {
+	text-decoration: none;
+}
+
+/**********************************************************************************/
+/*************************MAIN ALBUMS OF THE BAND STYLES***************************/
+/**********************************************************************************/
+
+#album-container {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	width: 70%;
+	margin: auto;
+	background: white;
+	border: 4px solid rgb(180, 180, 180);
+}
+
+#album-container div {
+	margin: 30px;
+}
+
+#album-container figcaption {
+	background: rgb(180, 180, 180, 0.3);
+	border-radius: 5%;
+}
+
+#album-container div img:hover {
+	box-shadow: 5px 5px 10px black;
+}
+
+#album-container div:hover {
+	transform: scale(1.05);
+}
+
+/**********************************************************************************/
+/*************************MAIN ALBUMS OF THE BAND TITLE STYLES*********************/
+/**********************************************************************************/
+
+#albums-title {
+	width: 100%;
+	background: white;
+	text-align: center;
+	padding: 20px;
+	font-size: 1.4em;
+	margin-top: 40px;
+	margin-bottom: 40px;
+	border: 4px solid rgb(180, 180, 180);
+}
+
+/**********************************************************************************/
+/*************************MAIN TITLES STYLES****************************************/
+/**********************************************************************************/
+
+#titles {
+	width: 100%;
+	background: white;
+	border: 4px solid rgb(180, 180, 180);
+	padding: 20px;
+}
+
+#title {
+	font-size: 4vw; /*3em*/
+}
+
+#sub-title {
+	font-size: 2vw;
+	margin-left: 100px;
+}
+
+/**********************************************************************************/
+/*************************MAIN COVER STYLES****************************************/
+/**********************************************************************************/
+
+#main-cover {
+	width: 80%;
+	display: grid;
+	grid-template-columns: repeat(1, 1fr 0.6fr);
+	grid-template-rows: 1fr;
+	margin: 40px auto;
+}
+
+#tribute-info {
+	background: white;
+	text-align: center;
+	border: 4px solid rgb(180, 180, 180);
+	margin-left: 20px;
+	font-size: 1.4em;
+	padding: 30px;
+}
+
+/**********************************************************************************/
+/*************************MAIN FOOTER STYLES***************************************/
+/**********************************************************************************/
+
+#footer {
+	width: 100%;
+	background: white;
+	padding: 10px;
+	margin-top: 30px;
+}
+
+/**********************************************************************************/
+/*************************MORE ABOUT THE BAND STYLES*******************************/
+/**********************************************************************************/
+
+#more-tribute-info {
+	font-weight: bold;
+	text-align: center;
+	font-size: 1.2em;
+	width: 90%;
+	margin: 30px auto;
+}
+
+#more-tribute-info a {
+	text-decoration: none;
+	color: rgba(0, 0, 0, 0.527);
+}
+
+#more-tribute-info a:hover {
+	color: rgba(255, 255, 255, 0.493);
+}
+
+/**********************************************************************************/
+/*************************ALBUM SONGS POPUP STYLES*********************************/
+/**********************************************************************************/
+
+.modal {
+	background-color: rgba(0, 0, 0, 0.8);
+	width: 100%;
+	height: 100vh;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	transition: all 1s;
+}
+
+#modal-1 {
+	opacity: 0;
+	visibility: hidden;
+}
+
+#modal-2 {
+	opacity: 0;
+	visibility: hidden;
+}
+
+#modal-3 {
+	opacity: 0;
+	visibility: hidden;
+}
+
+#modal-4 {
+	opacity: 0;
+	visibility: hidden;
+}
+
+#modal-5 {
+	opacity: 0;
+	visibility: hidden;
+}
+
+#modal-content {
+	border: 4px solid rgb(180, 180, 180);
+	width: 70%;
+	height: 65%;
+	background-color: white;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 2em;
+	text-align: left;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 1s;
+}
+
+#modal-content ul {
+	margin-top: 15px;
+	list-style: none;
+	line-height: 25px;
+	text-align: left;
+}
+
+#modal-close {
+	color: black;
+	font-size: 2em;
+	position: absolute;
+	top: 0.1em;
+	right: 0.5em;
+}
+
+#modal-1:target {
+	opacity: 1;
+	visibility: visible;
+}
+
+#modal-1:target #modal-content {
+	opacity: 1;
+	visibility: visible;
+}
+
+#modal-2:target {
+	opacity: 1;
+	visibility: visible;
+}
+
+#modal-2:target #modal-content {
+	opacity: 1;
+	visibility: visible;
+}
+
+#modal-3:target {
+	opacity: 1;
+	visibility: visible;
+}
+
+#modal-3:target #modal-content {
+	opacity: 1;
+	visibility: visible;
+}
+
+#modal-4:target {
+	opacity: 1;
+	visibility: visible;
+}
+
+#modal-4:target #modal-content {
+	opacity: 1;
+	visibility: visible;
+}
+
+#modal-5:target {
+	opacity: 1;
+	visibility: visible;
+}
+
+#modal-5:target #modal-content {
+	opacity: 1;
+	visibility: visible;
+}
+/**********************************************************************************/
+/*************************RESPONSIVE MAIN TITLES STYLES****************************/
+/**********************************************************************************/
+
+@media screen and (max-width: 600px) {
+	#titles {
+		text-align: center;
+	}
+
+	#title {
+		font-size: 6vw; /*3em*/
+	}
+
+	#sub-title {
+		font-size: 4vw;
+		margin-left: 0px;
+	}
+}
+
+/**********************************************************************************/
+/*************************RESPONSIVE MAIN COVER STYLES*****************************/
+/**********************************************************************************/
+
+@media screen and (max-width: 1100px) {
+	#main-cover {
+		grid-template-columns: 1fr;
+
+		width: 80%;
+		display: grid;
+		grid-template-rows: 1fr;
+		margin: 40px auto;
+	}
+
+	#tribute-info {
+		margin-left: 0px;
+		margin-top: 20px;
+	}
+}
+
+/**********************************************************************************/
+/*************************RESPONSIVE MAIN ALBUMS OF THE BAND STYLES****************/
+/**********************************************************************************/
+
+@media screen and (max-width: 800px) {
+	#album-container {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media screen and (max-width: 500px) {
+	#album-container {
+		grid-template-columns: repeat(1, 1fr);
+	}
+}
